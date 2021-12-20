@@ -127,24 +127,8 @@ header{
     font-size: 1.3rem;
 }
 
-/*↓ Agrego animaciones a FRASE2 ↓*/
 
-.frase2{
-    animation-name: aparecer;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-@keyframes aparecer{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
+
 .imagen{
     grid-area: img;
     background-image: url("https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_960_720.jpg");
@@ -357,6 +341,95 @@ header{
 .insta{
     grid-area: insta;
 }
+
+/*↓ Agrego animaciones ↓*/
+
+.frase2{
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.imagenCuadro1{
+    animation-name: cuadro12;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.imagenCuadro2{
+    animation-name: cuadro12;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.imagenCuadro3{
+    animation-name: cuadro34;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.imagenCuadro4{
+    animation-name: cuadro34;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.imagenEsc1{
+    animation-name: cuadro12;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.imagenEsc2{
+    animation-name: cuadro12;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.imagenEsc3{
+    animation-name: cuadro34;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.imagenEsc4{
+    animation-name: cuadro34;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes cuadro12{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+@keyframes cuadro34{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+ /* Fin animaciones*/
+
 
 /* ↓ Abajo adapto INDEX por media queries a pantallas más pequeñas ↓ */
 
