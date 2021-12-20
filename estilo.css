@@ -7,15 +7,25 @@
     background-image: url(./fondos/tex1.png);
     display: grid;
     padding: 20px;
+    padding-left: 60px; /*CONSULTA: Iara, cuando hice el cambio que me sugeriste de que no hiciera más de un header, al unir el logo y el menú dentro de un mismo header hice otro grid "header" (el que está abajo) para dividir la parte del logo y del menú en dos columnas. Para esto, cambié el grid template area de .padre y en la primera fila puse el header con sus dos subdivisiones. Lo que me pasó con eso fue que se creó un espacio de 35px a la derecha no sé porqué, asi que agregué un padding left para nivelarlo. De todas formas quisiera saber el error, asi que si podés después verlo sacándole este padding desde "inspeccionar" para ayudarme con eso sería genial. Por lo pronto dejo este padding provisorio para que quede centrada la página. Está agregado a TODOS los padres de los html.*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 0.7fr 0.7fr 4fr 0.7fr;
     grid-template-areas: 
-        "logo menu"
+        "header header"
         "frase1 frase1"
         "frase2 frase2"
         "img img"
         "wapp insta";
 }
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: 
+        "logo menu";
+    }
+
 .logo{
     grid-area: logo;
     background-color: whitesmoke;
@@ -149,10 +159,11 @@
     background-image: url(./fondos/tex1.png);
     display: grid;
     padding: 20px;
+    padding-left: 60px; /*Agregado para centrar. Solucionar después.*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 1fr 4fr 0.5fr 0.7fr;
     grid-template-areas: 
-        "logo menu"
+        "header header"
         "frase1 frase1"
         "video video"
         "volver volver"
@@ -189,10 +200,11 @@
     background-image: url(./fondos/tex1.png);
     display: grid;
     padding: 20px;
+    padding-left: 60px; /*Agregado para centrar. Solucionar después.*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 0.7fr 3fr 3fr 0.7fr 0.7fr 0.7fr;
     grid-template-areas: 
-        "logo menu"
+        "header header"
         "espacio espacio"
         "cuadro1 cuadro2"
         "cuadro3 cuadro4"
@@ -242,10 +254,11 @@
     background-image: url(./fondos/tex1.png);
     display: grid;
     padding: 20px;
+    padding-left: 60px; /*Agregado para centrar. Solucionar después.*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 0.7fr 3fr 3fr 0.7fr 0.7fr 0.7fr;
     grid-template-areas: 
-        "logo menu"
+        "header header"
         "espacio espacio"
         "esc1 esc2"
         "esc3 esc4"
@@ -297,10 +310,11 @@
     background-image: url(./fondos/tex1.png);
     display: grid;
     padding: 20px;
+    padding-left: 60px; /*Agregado para centrar. Solucionar después.*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.7fr 2.5fr  4fr 0.7fr 0.7fr;
     grid-template-areas: 
-        "logo menu"
+        "header header"
         "contacto contacto"
         "formulario formulario"
         "volver volver"
