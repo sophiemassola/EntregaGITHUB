@@ -126,6 +126,25 @@ header{
     font-family: 'MonteCarlo', cursive;
     font-size: 1.3rem;
 }
+
+/*↓ Agrego animaciones a FRASE2 ↓*/
+
+.frase2{
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 .imagen{
     grid-area: img;
     background-image: url("https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_960_720.jpg");
