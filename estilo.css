@@ -1,0 +1,901 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.padre{
+    background-image: url(./fondos/tex1.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 0.7fr 0.7fr 4fr 0.7fr;
+    grid-template-areas: 
+        "logo menu"
+        "frase1 frase1"
+        "frase2 frase2"
+        "img img"
+        "wapp insta";
+}
+.logo{
+    grid-area: logo;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+}
+.menu{
+    grid-area: menu;
+    background-color: whitesmoke;
+    /*padding-right: 60px;*/
+}
+.menu ul{
+    display: flex;
+    justify-content:space-around;
+    list-style: none;
+    padding-top: 30px;
+}
+.menu li{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    width: 10%;    
+} 
+.menu li a{
+    text-decoration: none;
+    color:rgb(14, 14, 133);
+}
+.menu li a:hover{
+    color:rgb(21, 112, 128);
+    font-weight: bold;
+}
+.menuDesplegable{
+    visibility: hidden;
+    grid-area: menu;
+    background-color: whitesmoke;
+    padding-right: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.menuDesplegable li{
+    list-style: none;
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+    width: 10%;
+}
+.menuDesplegable li a{
+    text-decoration: none;
+    color:rgb(14, 14, 133);
+}
+.menuDesplegable li a:hover{
+    color:rgb(21, 112, 128);
+    font-weight: bold;
+}
+.menuDesplegable ul li{
+    position: relative;
+}
+.menuDesplegable ul ul{
+    position: absolute;
+    display: none;
+}
+.menuDesplegable ul ul li{
+    display: inline-block;
+    width: 100%;
+}
+.menuDesplegable a{
+    text-decoration: none;
+}
+.menuDesplegable a:hover{
+    display: block;
+}
+.menuDesplegable ul li:hover ul{
+    display: block;
+    background-color: whitesmoke;
+    width: 90px;
+}
+.frase1{
+    grid-area: frase1;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.frase2{
+    grid-area: frase2;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 1.3rem;
+}
+.imagen{
+    grid-area: img;
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/17/20/34/concept-5183469_960_720.jpg");
+    width: 95%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+.wapp{
+    grid-area: wapp;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.insta{
+    grid-area: insta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insta img{
+    width: 25px;
+}
+.wapp img{
+    width: 25px;
+}
+
+/* ↓ Acá le doy estilo al BIO ↓*/
+.padrebio{
+    background-image: url(./fondos/tex1.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 1fr 4fr 0.5fr 0.7fr;
+    grid-template-areas: 
+        "logo menu"
+        "frase1 frase1"
+        "video video"
+        "volver volver"
+        "wapp insta";
+}
+.video{
+    grid-area: video;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.volver{
+    grid-area: volver;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+}
+.volver a{
+    text-decoration: none;
+    color:rgb(14, 14, 133);
+}
+.volver a:hover{
+    color:rgb(21, 112, 128);
+    font-weight: bold;
+}
+
+/* ↓ Acá le doy estilo a CUADROS y ESCULTURAS↓*/
+
+.padreCuadros{
+    background-image: url(./fondos/tex1.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 0.7fr 3fr 3fr 0.7fr 0.7fr 0.7fr;
+    grid-template-areas: 
+        "logo menu"
+        "espacio espacio"
+        "cuadro1 cuadro2"
+        "cuadro3 cuadro4"
+        "volver volver"
+        "wapp insta";
+}
+.imagenCuadro1{
+    grid-area: cuadro1;
+    background-image: url("https://i.pinimg.com/736x/77/82/21/778221a7b51e8ea9142e4a724f3edf87.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+    margin-bottom: 30px;
+}
+.imagenCuadro2{
+    grid-area: cuadro2;
+    background-image: url("https://www.decoora.com/wp-content/uploads/2021/03/cuadros-modernos.jpg.webp");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+    margin-bottom: 30px;
+}
+.imagenCuadro3{
+    grid-area: cuadro3;
+    background-image: url("https://www.arqhys.com/wp-content/uploads/2013/01/cuadros-pintados-flores-modernos-texturas-diseno-1-1-D_NQ_NP_595605-MLA25055140777_092016-F.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+}
+.imagenCuadro4{
+    grid-area: cuadro4;
+    background-image: url("https://www.artmajeur.com/medias/standard/h/e/hernana-alvarez/artwork/8897989_cuadros-modernos-abstractos-en-acrilico-2.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+}
+
+.padreEsculturas{
+    background-image: url(./fondos/tex1.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 0.7fr 3fr 3fr 0.7fr 0.7fr 0.7fr;
+    grid-template-areas: 
+        "logo menu"
+        "espacio espacio"
+        "esc1 esc2"
+        "esc3 esc4"
+        "volver volver"
+        "wapp insta";
+}
+.imagenEsc1{
+    grid-area: esc1;
+    background-image: url("https://m.media-amazon.com/images/I/61vPru7iNyL._AC_SY450_.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+    margin-bottom: 30px;
+}
+.imagenEsc2{
+    grid-area: esc2;
+    background-image: url("https://m.media-amazon.com/images/I/51TRXmOAUsL._AC_SY350_.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+    margin-bottom: 30px;
+}
+.imagenEsc3{
+    grid-area: esc3;
+    background-image: url("https://www.centroespejos.com/12221-large_default/escultura-para-pared-abstracta-en-metal-dorado.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+}
+.imagenEsc4{
+    grid-area: esc4;
+    background-image: url("https://i.etsystatic.com/24287747/r/il/47d37f/3073017927/il_340x270.3073017927_46d2.jpg");
+    width: 70%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;  
+}
+
+/* ↓ Acá le doy estilo a CONTACTO ↓*/
+
+.padreContacto{
+    background-image: url(./fondos/tex1.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 2.5fr  4fr 0.7fr 0.7fr;
+    grid-template-areas: 
+        "logo menu"
+        "contacto contacto"
+        "formulario formulario"
+        "volver volver"
+        "wapp insta";
+}
+.contacto{
+    grid-area: contacto;
+    text-align: center;
+    margin: auto;
+    font-size: 3.5rem;
+    font-family: 'Bebas Neue', cursive
+}
+.formulario{
+    grid-area: formulario;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+.wapp{
+    grid-area: wapp;
+}
+.insta{
+    grid-area: insta;
+}
+
+/* ↓ Abajo adapto INDEX por media queries a pantallas más pequeñas ↓ */
+
+@media screen and (min-width:0px) and (max-width: 320px){ /* Para teléfonos*/
+    .padre{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 2.5fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "frase2 frase2"
+            "img img"
+            "wapp wapp"
+            "insta insta";
+        } 
+    .logo img{
+        width: 100px;
+    } 
+    .menu li{
+        font-size: 1rem;
+    } 
+    .frase1{
+        font-size: 1rem;
+
+    }
+    .frase2{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .imagen{
+        height: 200px;
+        margin: auto;
+    }
+    .insta{
+        font-size: 0.6rem;
+    }
+    .wapp{
+        font-size: 0.6rem;
+    }
+    .insta img{
+        width: 15px;
+    }
+    .wapp img{
+        width: 15px;
+    }
+    .padrebio{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 0.4fr 3fr 0.2fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "video video"
+            "volver volver"
+            "wapp wapp"
+            "insta insta";
+        }
+    .menu{
+        visibility: hidden;
+    }
+    .menuDesplegable{
+        visibility: visible;
+    }
+    .volver{
+        display: none;
+    }
+    .padreCuadros{
+    background-image: url(./fondos/tex2.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 0.7fr 3fr 3fr 3fr 3fr 0.3fr 0.3fr;
+    grid-template-areas: 
+        "logo menu"
+        "espacio espacio"
+        "cuadro1 cuadro1"
+        "cuadro2 cuadro2"
+        "cuadro3 cuadro3"
+        "cuadro4 cuadro4"
+        "wapp wapp"
+        "insta insta";
+    }
+    .imagenCuadro1{
+    width: 100%;
+    height: 200px;
+    }
+    .imagenCuadro2{
+    width: 100%;
+    height: 200px;
+    }
+    .imagenCuadro3{
+    width: 100%;
+    height: 200px;
+    }
+    .imagenCuadro4{
+    width: 100%;
+    height: 200px;
+    }
+    .padreEsculturas{
+    background-image: url(./fondos/tex2.png);
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.7fr 0.7fr 3fr 3fr 3fr 3fr 0.3fr 0.3fr;
+    grid-template-areas: 
+        "logo menu"
+        "espacio espacio"
+        "esc1 esc1"
+        "esc2 esc2"
+        "esc3 esc3"
+        "esc4 esc4"
+        "wapp wapp"
+        "insta insta";
+    }
+    .imagenEsc1{
+    width: 100%;
+    height: 200px;
+    }
+    .imagenEsc2{
+    width: 100%;
+    height: 200px;
+    }
+    .imagenEsc3{
+    width: 100%;
+    height: 200px;
+    }
+    .imagenEsc4{
+    width: 100%;
+    height: 200px;
+    }
+    .padreContacto{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.9fr 2.5fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "contacto contacto"
+            "formulario formulario"
+            "wapp wapp"
+            "insta insta";
+    }
+
+.contacto{
+    font-size: 2.6rem;
+}
+
+
+}
+@media screen and (min-width:321px) and (max-width: 480px){ /* Para teléfonos*/
+    .padre{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 2.5fr 0.5fr 0.5fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "frase2 frase2"
+            "img img"
+            "wapp wapp"
+            "insta insta";
+        } 
+    .logo img{
+        width: 100px;
+    } 
+    .menu{
+        padding-right: 0px;
+    }
+    .menu li{
+        font-size: 1rem;
+    } 
+    .frase1{
+        font-size: 1rem;
+
+    }
+    .frase2{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .imagen{
+        height: 220px;
+        margin: auto;
+    }
+    .insta{
+        font-size: 0.6rem;
+    }
+    .wapp{
+        font-size: 0.6rem;
+    }
+    .insta img{
+        width: 15px;
+    }
+    .wapp img{
+        width: 15px;
+    }
+    .padrebio{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 0.4fr 3fr 0.2fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "video video"
+            "volver volver"
+            "wapp wapp"
+            "insta insta";
+    }
+    .imagenCuadro{
+        grid-area: cuadro;
+        background-image: url("./media/cuadros1.PNG");
+        width: 200px;
+        height: 330px;
+        background-repeat: no-repeat;
+        margin: auto;
+        }
+
+    .menu{
+        visibility: hidden;
+    }
+    .menuDesplegable{
+        visibility: visible;
+    }
+    .volver{
+        display: none;
+    }
+    .padreCuadros{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.7fr 3fr 3fr 3fr 3fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "espacio espacio"
+            "cuadro1 cuadro1"
+            "cuadro2 cuadro2"
+            "cuadro3 cuadro3"
+            "cuadro4 cuadro4"
+            "wapp wapp"
+            "insta insta";
+    }
+    .imagenCuadro1{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenCuadro2{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenCuadro3{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenCuadro4{
+        width: 70%;
+        height: 200px;
+    }
+    .padreEsculturas{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.7fr 3fr 3fr 3fr 3fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "espacio espacio"
+            "esc1 esc1"
+            "esc2 esc2"
+            "esc3 esc3"
+            "esc4 esc4"
+            "wapp wapp"
+            "insta insta";
+    }
+    .imagenEsc1{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenEsc2{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenEsc3{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenEsc4{
+        width: 70%;
+        height: 200px;
+    }
+    .padreContacto{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.9fr 2.5fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "contacto contacto"
+            "formulario formulario"
+            "wapp wapp"
+            "insta insta";
+    }
+
+.contacto{
+    font-size: 2.9rem;
+    }
+} 
+
+@media screen and (min-width:481px) and (max-width: 600px){ /*teléfonos en modo horizontal*/
+    .padre{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr 0.7fr 0.7fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "frase2 frase2"
+            "img img"
+            "wapp wapp"
+            "insta insta";
+        }  
+    .menu{
+            visibility: hidden;
+    }
+    .menuDesplegable{
+            visibility: visible;
+    }
+    .frase1{
+        font-size: 1rem;
+        padding: 5px;
+        padding-top: 20px;
+    }
+    .frase2{
+        font-size: 1.1rem;
+        padding-bottom: 5px;
+    }
+    .imagen{
+        height: 250px;
+    }
+    .insta{
+        font-size: 0.8rem;
+    }
+    .wapp{
+        font-size: 0.8rem;
+    }
+    .insta img{
+        width: 20px;
+    }
+    .wapp img{
+        width: 20px;
+    }
+    .padrebio{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 0.4fr 3fr 0.2fr 0.4fr 0.4fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "video video"
+            "volver volver"
+            "wapp wapp"
+            "insta insta";
+        }
+    .video{
+        padding-top: 20px;
+    }
+    .volver{
+        display: none;
+    }
+    .padreCuadros{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.7fr 3fr 3fr 3fr 3fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "espacio espacio"
+            "cuadro1 cuadro1"
+            "cuadro2 cuadro2"
+            "cuadro3 cuadro3"
+            "cuadro4 cuadro4"
+            "wapp wapp"
+            "insta insta";
+    }
+    .imagenCuadro1{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenCuadro2{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenCuadro3{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenCuadro4{
+        width: 70%;
+        height: 200px;
+    }
+    .padreEsculturas{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.7fr 3fr 3fr 3fr 3fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "espacio espacio"
+            "esc1 esc1"
+            "esc2 esc2"
+            "esc3 esc3"
+            "esc4 esc4"
+            "wapp wapp"
+            "insta insta";
+    }
+    .imagenEsc1{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenEsc2{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenEsc3{
+        width: 70%;
+        height: 200px;
+    }
+    .imagenEsc4{
+        width: 70%;
+        height: 200px;
+    }
+    .padreContacto{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.9fr 2.5fr 0.3fr 0.3fr;
+        grid-template-areas: 
+            "logo menu"
+            "contacto contacto"
+            "formulario formulario"
+            "wapp wapp"
+            "insta insta";
+    }
+
+.contacto{
+    font-size: 2.6rem;
+}
+} 
+
+
+@media screen and (min-width:601px) and (max-width:1024px) { 
+    .padre{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 4fr 0.7fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "frase2 frase2"
+            "img img"
+            "wapp insta";
+        }  
+    .logo img{
+        width: 150px;
+    } 
+    .imagen{
+        height: 300px;
+        margin: auto;
+    }
+    .padrebio{
+        background-image: url(./fondos/tex2.png);
+        display: grid;
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 0.4fr 3fr 0.2fr 0.4fr 0.4fr;
+        grid-template-areas: 
+            "logo menu"
+            "frase1 frase1"
+            "video video"
+            "volver volver"
+            "wapp insta";
+        }
+        .volver{
+            display: none;
+        }
+        .padreCuadros{
+            background-image: url(./fondos/tex2.png);
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 0.7fr 0.7fr 3fr 3fr 0.3fr;
+            grid-template-areas: 
+                "logo menu"
+                "espacio espacio"
+                "cuadro1 cuadro2"
+                "cuadro3 cuadro4"
+                "wapp insta";
+        }
+        .imagenCuadro1{
+            width: 90%;
+            height: 350px;
+        }
+        .imagenCuadro2{
+            width: 90%;
+            height: 350px;
+        }
+        .imagenCuadro3{
+            width: 90%;
+            height: 350px;
+        }
+        .imagenCuadro4{
+            width: 90%;
+            height: 350px;
+        }
+        .padreEsculturas{
+            background-image: url(./fondos/tex2.png);
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 0.7fr 0.7fr 3fr 3fr 0.3fr;
+            grid-template-areas: 
+                "logo menu"
+                "espacio espacio"
+                "esc1 esc2"
+                "esc3 esc4"
+                "wapp insta";
+        }
+        .imagenEsc1{
+            width: 90%;
+            height: 350px;
+        }
+        .imagenEsc2{
+            width: 90%;
+            height: 350px;
+        }
+        .imagenEsc3{
+            width: 90%;
+            height: 350px;
+        }
+        .imagenEsc4{
+            width: 90%;
+            height: 350px;
+        }
+        .padreContacto{
+            background-image: url(./fondos/tex2.png);
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 0.7fr 0.9fr 2.5fr 0.3fr ;
+            grid-template-areas: 
+                "logo menu"
+                "contacto contacto"
+                "formulario formulario"
+                "wapp insta";
+        }
+} 
